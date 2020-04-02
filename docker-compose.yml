@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  backup:
+    build: .
+    restart: never
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - ./examples/userscripts:/app/pybku/scripts
